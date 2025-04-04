@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake News Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <button id="theme-toggle">🌙 Toggle Dark Mode</button>
+
+    <h1>📰 Fake News Detector</h1>
+
+    <div class="awareness">
+        <p id="awareness-quote">"Think before you share – Fake news spreads like wildfire!" 🔥</p>
+    </div>
+
+    <div class="container">
+        <textarea id="newsText" placeholder="Enter news text here..."></textarea><br>
+        <button onclick="predictFakeNews()">🔍 Analyze News</button>
+        <p id="loading" class="loading">🔄 Analyzing...</p>
+        <h3 id="result"></h3>
+    </div>
+
+    <div class="news-tips">
+        <h3>🔎 How to Spot Fake News?</h3>
+        <ul id="tipsList">
+            <li>Check the source: Is it reliable?</li>
+            <li>Verify facts with official news websites.</li>
+            <li>Be cautious of sensational headlines.</li>
+        </ul>
+    </div>
+
+  
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
